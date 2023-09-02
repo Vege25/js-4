@@ -9,8 +9,7 @@ const fetchData = async (url, options) => {
   const dataJSON = await res.json();
   return dataJSON;
 };
-
-async function dataFunction() {
+(async function () {
   try {
     const user = {
       name: 'John Doe',
@@ -29,6 +28,4 @@ async function dataFunction() {
   } catch (error) {
     console.error('An error occurred:', error);
   }
-}
-
-dataFunction();
+})();
